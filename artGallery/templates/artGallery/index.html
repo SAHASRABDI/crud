@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index View</title>
+</head>
+<body>
+    <h2>List of All Art</h2>
+    {% if list_of_art_names %}
+    <ul>
+    {% for art in list_of_art_names %}
+        <li>
+            <a href="{% url 'artGallery:detail' art.id %}">{{art.name_of_art}}</a>
+        </li>
+    {% endfor %}
+    </ul>
+    {% else %}
+    <h1>No Art in Gallery</h1>
+    {% endif %}
+    <button>    <a href="{% url 'artGallery:add'%}" style="height: 2rem;width:2rem;">Add</a>
+    </button>
+</body>
+</html>

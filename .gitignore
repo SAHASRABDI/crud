@@ -1,3 +1,5 @@
 .vscode/settings.json
 artGallery/migrations/
 artGalleryDjango/__pycache__/
+artGallery/__pycache__/
+media/

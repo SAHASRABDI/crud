@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Item Details</title>
+</head>
+<body>
+    <button><a href="{% url 'artGallery:index'%}">Back</a></button>
+
+    <h1>Name of Art: <span style="color:green">{{art.name_of_art}}</span></h1>
+    <h3>Artist: <span style="color:green">{{art.artist_name}}</span></h3>
+    <h3>Estimated Evaluation: <span style="color:green">Rs. {{art.estimated_evaluation}}</span></h3>
+    <h3>Is this up for sale ? <span style="color:green">{{art.up_for_sale}}</span></h3>
+    <img src="{{art.image_of_art.url}}" alt="" style="height: 500px; float: left; ">
+</body>    
+
+</html>
