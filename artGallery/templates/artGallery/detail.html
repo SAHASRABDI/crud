@@ -8,6 +8,8 @@
 </head>
 <body>
     <button><a href="{% url 'artGallery:index'%}">Back</a></button>
+    <button><a href="{% url 'artGallery:delete' art.id%}">Delete</a></button>
+    <button><a href="{% url 'artGallery:update' art.id%}">Edit</a></button>
 
     <h1>Name of Art: <span style="color:green">{{art.name_of_art}}</span></h1>
     <h3>Artist: <span style="color:green">{{art.artist_name}}</span></h3>

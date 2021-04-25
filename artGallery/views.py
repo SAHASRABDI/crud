@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.views import generic
 from .models import Art
+from django.urls import reverse_lazy
 
 # Create your views here.
 class IndexView(generic.ListView):
@@ -20,3 +21,15 @@ class CreateArt(generic.CreateView):
     model = Art
     template_name = "artGallery/create.html"
     fields = "__all__"
+
+
+class UpdateArt(generic.UpdateView):
+    model = Art
+    template_name = "artGallery/create.html"
+    fields = "__all__"
+
+
+class DeleteArt(generic.DeleteView):
+    model = Art
+    template_name = "artGallery/delete.html"
+    success_url = reverse_lazy("artGallery:index")

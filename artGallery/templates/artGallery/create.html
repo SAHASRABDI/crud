@@ -7,7 +7,7 @@
     <title>Add Art</title>
 </head>
 <body>
-    <form method="post" action="{% url 'artGallery:add'%}" enctype="multipart/form-data">
+    <form method="post" action="" enctype="multipart/form-data">
         {% csrf_token %}
         {{form.as_p}}
         <input type="submit"/>

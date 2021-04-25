@@ -1,0 +1,8 @@
+<form method="post">{% csrf_token %}    
+    <h2>Are you sure you want to delete "{{ object }}"?</h2>
+    <div>
+        <img src="{{object.image_of_art.url}}" alt="" style="height: 500px; margin:1rem">
+    </div>
+    <input type="submit" value="Confirm">
+
+</form>
