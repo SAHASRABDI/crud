@@ -5,9 +5,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Index View</title>
+    <style>
+        body {
+            background-color: linen;
+            font-size: 1.5em;
+            margin: 20px;
+            padding: 40px;
+        }
+        
+        
+        </style>
+    
 </head>
-<body>
-    <h2>List of All Art</h2>
+<body >
+    <u> <h2 style="color:rgb(7, 7, 7);">List of All Art</h2> </u> 
     {% if list_of_art_names %}
     <ul>
     {% for art in list_of_art_names %}
@@ -19,7 +30,7 @@
     {% else %}
     <h1>No Art in Gallery</h1>
     {% endif %}
-    <button>    <a href="{% url 'artGallery:add'%}" style="height: 2rem;width:2rem;">Add</a>
+    <button style="height:100px;width:800px"> <a href="{% url 'artGallery:add'%}" style="height: 2rem;width:2rem;">Add</a>
     </button>
 </body>
 </html>

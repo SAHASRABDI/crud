@@ -5,13 +5,31 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Add Art</title>
+   
 </head>
 <body>
+    <style>
+        body {
+            background-color: linen;
+            font-size: 1.5em;
+            margin: 20px;
+            padding: 40px;
+        }
+        
+        h1{
+          color: maroon;
+          margin-left: 40px;
+        }
+        h3{
+          color: maroon;
+          margin-left: 40px;
+        }
+        </style>
     <form method="post" action="" enctype="multipart/form-data">
         {% csrf_token %}
         {{form.as_p}}
-        <input type="submit"/>
-        <button><a href="{% url 'artGallery:index'%}">Back</a></button>
+        <input type ="submit"/>
+        <button style="height:50px;width:80px">Back</button>
     </form>
 </body>
 </html>

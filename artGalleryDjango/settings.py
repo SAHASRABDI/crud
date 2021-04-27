@@ -77,12 +77,11 @@ WSGI_APPLICATION = "artGalleryDjango.wsgi.application"
 
 DATABASES = {
     "default": {
-        "ENGINE": "django.db.backends.postgresql_psycopg2",
-        "NAME": "db_psql",
-        "USER": "djangouser",
-        "PASSWORD": "password",
-        "HOST": "localhost",
-        "PORT": "",
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'details',
+        'USER':'postgres',
+        'PASSWORD':'Saha07',
+        'HOST':'localhost'
     }
 }
 
@@ -125,11 +124,13 @@ USE_TZ = True
 
 STATIC_URL = "/static/"
 
+
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 # Media Files uploaded by user to be stored here
+
 MEDIA_ROOT = os.path.join(BASE_DIR, "media")
 MEDIA_URL = "/media/"

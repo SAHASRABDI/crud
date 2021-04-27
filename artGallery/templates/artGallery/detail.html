@@ -5,16 +5,35 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Item Details</title>
+    <style>
+        body {
+            background-color: linen;
+            font-size: 1.5em;
+            margin: 20px;
+            padding: 40px;
+        }
+        
+        h1{
+          color: maroon;
+          margin-left: 40px;
+        }
+        h3{
+          color: maroon;
+          margin-left: 40px;
+        }
+        </style>
+    
 </head>
 <body>
-    <button><a href="{% url 'artGallery:index'%}">Back</a></button>
-    <button><a href="{% url 'artGallery:delete' art.id%}">Delete</a></button>
-    <button><a href="{% url 'artGallery:update' art.id%}">Edit</a></button>
-
-    <h1>Name of Art: <span style="color:green">{{art.name_of_art}}</span></h1>
-    <h3>Artist: <span style="color:green">{{art.artist_name}}</span></h3>
-    <h3>Estimated Evaluation: <span style="color:green">Rs. {{art.estimated_evaluation}}</span></h3>
-    <h3>Is this up for sale ? <span style="color:green">{{art.up_for_sale}}</span></h3>
+    
+    <button style="height:70px;width:90px"><a href="{% url 'artGallery:index'%}">Back</a></button>
+    <button style="height:70px;width:90px"><a href="{% url 'artGallery:delete' art.id%}">Delete</a></button>
+    <button style="height:70px;width:90px"><a href="{% url 'artGallery:update' art.id%}">Edit</a></button>
+     
+    <h1>Name of Art: <span style="color:rgb(71, 9, 243)">{{art.name_of_art}}</span></h1>
+    <h3>Artist: <span style="color:rgb(71, 9, 243)">{{art.artist_name}}</span></h3>
+    <h3>Estimated Evaluation: <span style="color:rgb(71, 9, 243)">Rs. {{art.estimated_evaluation}}</span></h3>
+    <h3>Is this up for sale ? <span style="color:rgb(71, 9, 243)">{{art.up_for_sale}}</span></h3>
     <img src="{{art.image_of_art.url}}" alt="" style="height: 500px; float: left; ">
 </body>    
 
